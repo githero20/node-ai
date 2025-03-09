@@ -36,7 +36,6 @@ process.stdin.addListener("data", async function (input: any) {
   await createChatCompletion();
 });
 
-// // used in Node.js to listen for input events on the standard input stream (stdin)
 // process.stdin.addListener("data", async function (input: any) {
 //   const userInput = input.toString().trim();
 
