@@ -1,9 +1,10 @@
 {
   "name": "chat-ai",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node -r ts-node/register --env-file=.env src/basic-chat/index.ts",
+    "test": "test"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,10 @@
   "dependencies": {
     "openai": "^4.86.2",
     "tiktoken": "^1.0.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
