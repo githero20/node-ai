@@ -1,0 +1,21 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "basic-ai-intro",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node -r ts-node/register --env-file=.env src/index.ts",
+    "test": "test"
+  },
+  "author": "Omogbai",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^4.86.2",
+    "tiktoken": "^1.0.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
