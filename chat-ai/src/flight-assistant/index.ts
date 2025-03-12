@@ -3,11 +3,11 @@ import OpenAI from "openai";
 const openAI = new OpenAI();
 
 const getFlightsBtwnAirports = (origin: string, destination: string) => {
-  return "There are 3 flights: 1234, 5678 and 0123";
+  return `There are 3 flights between ${origin} and ${destination} : 1234, 5678 and 0123`;
 };
 
 const makeFlightReservation = (flightNo: string) => {
-  return "Here is your reservation number: 34560";
+  return `Here is your reservation for flight ${flightNo}: 34560`;
 };
 
 const context: OpenAI.Chat.ChatCompletionMessageParam[] = [

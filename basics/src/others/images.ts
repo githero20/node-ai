@@ -49,7 +49,7 @@ const generateAdvancedImg = async () => {
 
   const rawImage = response.data[0].b64_json!;
   if (rawImage) {
-    writeFile("ninjaImg", Buffer.from(rawImage, "base64"), (err) => {
+    await writeFile("ninjaImg", Buffer.from(rawImage, "base64"), (err) => {
       err
         ? console.log("An error occurred")
         : console.log("File created successfully!");
