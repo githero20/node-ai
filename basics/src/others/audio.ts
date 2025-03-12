@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { writeFileSync, createReadStream, writeFile } from "fs";
+import { createReadStream, writeFile } from "fs";
 
 const openai = new OpenAI();
 
