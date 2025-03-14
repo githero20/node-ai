@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r ts-node/register --env-file=.env src/emb/main.ts"
+    "start": "node -r ts-node/register --env-file=.env src/chroma/Client.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@pinecone-database/pinecone": "^5.1.1",
     "chromadb": "^2.0.1",
+    "chromadb-default-embed": "^2.14.0",
     "openai": "^4.87.3",
     "tiktoken": "^1.0.20"
   },
