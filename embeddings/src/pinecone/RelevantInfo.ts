@@ -115,3 +115,8 @@ async function main() {
 }
 
 main();
+const today = new Date();
+
+const noOfYears: () => number = () => {
+  return today.getFullYear() - 2021;
+};
