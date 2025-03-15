@@ -36,7 +36,7 @@ async function main() {
   });
 
   // get relevant documents:
-  const results = await retriever.getRelevantDocuments(question);
+  const results = await retriever.invoke(question);
   const resultDocs = results.map((result) => result.pageContent);
 
   //build template:
