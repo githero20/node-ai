@@ -1,4 +1,5 @@
 import { HfInference } from "@huggingface/inference";
+import { writeFile } from "fs";
 
 const inference = new HfInference(process.env.HF_TOKEN);
 
@@ -32,3 +33,31 @@ async function translate2() {
   });
   console.log(result);
 }
+
+async function answerQuestion() {
+  const result = await inference.questionAnswering({
+    inputs: {
+      context: "The quick brown fox jumps over the lazy dog.",
+      question: "What is the fox's adjective?",
+      // the model used only answers the question based on the context
+    },
+  });
+  console.log(result);
+}
+
+async function textToImage() {
+  const result = await inference.textToImage({
+    inputs: "Cat in the hat on a mat",
+    model: "stabilityai/stable-diffusion-2",
+    parameters: {
+      negative_prompt: "blurry",
+    },
+  });
+
+  const buffer = Buffer.from(await result.arrayBuffer());
+  writeFile("image.png", buffer, () => {
+    console.log("image saved");
+  });
+}
+
+answerQuestion();
